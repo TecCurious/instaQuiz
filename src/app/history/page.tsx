@@ -6,7 +6,7 @@ import { getAllQuizData } from '@/lib/db';
 import { useEffect, useState } from 'react';
 import { QuizResult } from '@/types/quize';
 
-const page = () => {
+const Page = () => {
 
      const [quizData, setQuizData] = useState<QuizResult[]>([]); 
     
@@ -28,4 +28,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

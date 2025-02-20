@@ -48,7 +48,7 @@ const Instruction = () => {
               <ul className="text-gray-600 space-y-2">
                 <li>• Select the best answer for multiple-choice questions</li>
                 <li>• Enter clear numerical answers for integer-type questions</li>
-                <li>• Click "Next" to proceed to the following question</li>
+                <li>• Click Next to proceed to the following question</li>
               </ul>
             </div>
           </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Input } from '@/components/ui/input';
 import { CheckCircle, AlertCircle } from 'lucide-react';
 import { Button } from '../ui/button';
-import { useState } from 'react';
+
 
 interface NumericalInputProps {
   value: string | number;

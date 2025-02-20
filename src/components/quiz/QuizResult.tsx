@@ -1,21 +1,18 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { CheckCircle, XCircle } from 'lucide-react';
 import { VscQuestion } from "react-icons/vsc";
 import { Score } from '@/types/quize';
 import { Button } from '../ui/button';
 import Link from 'next/link';
-import { useState } from 'react';
+
 
 interface QuizResultsProps {
   score: Score;
   totalQuestions: number;
-  count:number;
-  setCount: React.Dispatch<React.SetStateAction<number>>;
 }
 
-export const QuizResults: React.FC<QuizResultsProps> = ({ score, totalQuestions, count, setCount }) => {
-  const [dataSaved, setDataSaved] = useState<Boolean>(false);
+export const QuizResults: React.FC<QuizResultsProps> = ({ score, totalQuestions}) => {
   const handleReset = () => {
     window.location.reload();
   }

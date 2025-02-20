@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import CustomAlertDialog from "@/components/alert/AlertComponent";
 import { useRouter } from "next/navigation";
 import { FaPlay } from 'react-icons/fa';
-const page = () => {
+const Page = () => {
 
   const router = useRouter(); 
 
@@ -43,4 +43,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

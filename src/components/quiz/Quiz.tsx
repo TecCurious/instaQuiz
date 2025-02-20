@@ -6,11 +6,11 @@ import { MultipleChoiceOptions } from './MultipleChoiceoption';
 import { NumericalInput } from './NumericalInput';
 import { QuizResults } from './QuizResult';
 import questions from '@/lib/Questions';
-import { Score, Question } from '@/types/quize';
+import { Score} from '@/types/quize';
 import { addQuizData } from '@/lib/db';
 
 export const QuizCard = () => {
-  const [Questions] = useState<Question[]>(questions);
+  // const [Questions] = useState<Question[]>(questions);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | number>('');
   const [timeLeft, setTimeLeft] = useState(30);
@@ -18,7 +18,6 @@ export const QuizCard = () => {
   const [score, setScore] = useState<Score>({ correct: 0, wrong: 0 });
   const [quizEnded, setQuizEnded] = useState(false);
   const [inpt, setInpt] = useState<string | number>('');
-  const [count, setCount ] = useState<number>(0);
   useEffect(() => {
     if (timeLeft > 0 && !isAnswered && !quizEnded) {
       const timer = setInterval(() => {
@@ -65,7 +64,7 @@ export const QuizCard = () => {
 
   if (quizEnded) {
     console.log("rendering quiz results");
-    return <QuizResults score={score} totalQuestions={questions.length} count={count} setCount={setCount}/>;
+    return <QuizResults score={score} totalQuestions={questions.length} />;
   }
 
   const currentQuestion = questions[currentQuestionIndex];
